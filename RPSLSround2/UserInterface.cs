@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RPSLSround2
 {
-    class Program
+    static class UserInterface
     {
-        static void Main(string[] args)
-        {
-            Game game1 = new Game();
-            game1.ChooseGameType();
-        }
+        //variables
+
+        //constructor
+
+        //methods
+
+        
     }
 }

@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace RPSLSround2
 {
-    class Program
+    class ComputerPlayer : Player
     {
-        static void Main(string[] args)
+        //Variables (Has a)
+
+        //Constructor
+        public ComputerPlayer()
         {
-            Game game1 = new Game();
-            game1.ChooseGameType();
+            name = "Bob";
         }
+
+        //Methods (Can do)
     }
 }
