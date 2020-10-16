@@ -10,8 +10,13 @@ namespace RPSLSround2
     {
         static void Main(string[] args)
         {
+            
             Game game1 = new Game();
+            game1.WelcomeAndRules();
             game1.ChooseGameType();
+            game1.GestureComparison();
+            game1.RunGame();
+            game1.DecideWinner();
         }
     }
 }

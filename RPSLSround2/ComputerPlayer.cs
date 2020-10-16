@@ -9,13 +9,22 @@ namespace RPSLSround2
     class ComputerPlayer : Player
     {
         //Variables (Has a)
+        public int randomNum;
 
         //Constructor
         public ComputerPlayer()
         {
-            name = "Bob";
+            name = "CPU";
         }
 
         //Methods (Can do)
+        public override void ChooseGesture()
+        {
+            Random rng = new Random();
+            randomNum = rng.Next(0, 4);
+            chosenGesture = gestures[randomNum];
+            Console.WriteLine($"The computer has chosen {chosenGesture}");
+        }
+
     }
 }

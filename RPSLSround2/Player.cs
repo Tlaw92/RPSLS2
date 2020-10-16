@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLSround2
 {
-    class Player
+    abstract class Player
     {
         //Variables (Has a)
         public string name;
@@ -29,10 +29,16 @@ namespace RPSLSround2
         }
 
         //Methods (Can do)
-        public void ChooseGesture()
-        {
+        public abstract void ChooseGesture();
 
+        public void DisplayOptions()
+        {
+            for (int i = 0; i < gestures.Count; i++)
+            {
+                Console.WriteLine($"Press {i+1} for {gestures[i]}");
+            }
         }
+        
 
     }
 }
