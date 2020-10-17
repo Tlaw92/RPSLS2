@@ -23,7 +23,7 @@ namespace RPSLSround2
             Random rng = new Random();
             randomNum = rng.Next(0, 4);
             chosenGesture = gestures[randomNum];
-            Console.WriteLine($"The computer has chosen {chosenGesture}");
+            //Console.WriteLine($"The computer has chosen {chosenGesture}");
         }
 
     }

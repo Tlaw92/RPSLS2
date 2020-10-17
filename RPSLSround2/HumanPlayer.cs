@@ -20,8 +20,7 @@ namespace RPSLSround2
         //Methods (Can do)
         public override void ChooseGesture()
         {
-            Console.WriteLine("Which gesture would you \n" +
-                "like to pick this round?");
+            Console.WriteLine("\nWhich gesture would you like to choose this round?");
             DisplayOptions();
             string userInput = Console.ReadLine();
             switch (userInput)
