@@ -220,39 +220,49 @@ namespace RPSLSround2
             }
         }
 
-        public void RunGame() //run choose gesture method until one players score is 2
+        public void RunGame()
         {
-            //I want to loop over the choose gesture method
             while (playerOne.score < 2 && playerTwo.score < 2)
             {
                 GestureComparison();
-                Console.WriteLine($"\n{playerOne.name}'s score is {playerOne.score} \n{playerTwo.name}'s score is {playerTwo.score} \n \n" +
-                    $"Press Enter to continue to the next round!");
-                Console.ReadLine();
-                Console.Clear();
+                if (DecideWinner())
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine($"\n{playerOne.name}'s score is {playerOne.score} \n{playerTwo.name}'s score is {playerTwo.score} \n \n" +
+                        $"Press Enter to continue to the next round!");
+                    Console.ReadLine();
+                    Console.Clear();
+                }
+
 
             }
         }
 
-        public void DecideWinner()
+        public bool DecideWinner()
         {
             if (playerOne.score == 2)
             {
                 Console.WriteLine($"{playerOne.name} wins the game");
                 Console.ReadLine();
+                return true;
             }
             if (playerTwo.score == 2)
             {
                 Console.WriteLine($"{playerTwo.name} wins the game");
                 Console.ReadLine();
+                return true;
             }
+            return false;
         }
         public void RunMain()
         {
             WelcomeAndRules();
             ChooseGameType();
             RunGame();
-            DecideWinner();
+            
         }
     }
 }
